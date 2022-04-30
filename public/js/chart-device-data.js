@@ -12,19 +12,35 @@ $(document).ready(() => {
       this.deviceId = deviceId;
       this.maxLen = 50;
       this.timeData = new Array(this.maxLen);
-      this.temperatureData = new Array(this.maxLen);
-      this.humidityData = new Array(this.maxLen);
+      //this.temperatureData = new Array(this.maxLen);
+      //this.humidityData = new Array(this.maxLen);
+      this.temperatureEngineData = new Array(this.maxLen);
+      this.temperatureTyreFrontLeft = new Array(this.maxLen);
+      this.temperatureTyreFrontRight = new Array(this.maxLen);
+      this.temperatureTyreBackLeft = new Array(this.maxLen);
+      this.temperatureTyreBackRight =new Array(this.maxLen);
     }
 
-    addData(time, temperature, humidity) {
+    addData(time, temperatureEngineData, temperatureTyreFrontLeft, temperatureTyreFrontRight,
+      temperatureTyreBackLeft, temperatureTyreBackRight,humidity, temper) {
       this.timeData.push(time);
-      this.temperatureData.push(temperature);
+      //this.temperatureData.push(temperature);
+      this.temperatureEngineData.push
+      this.temperatureTyreFrontLeft.push
+      this.temperatureTyreFrontRight.push
+      this.temperatureTyreBackLeft.push
+      this.temperatureTyreBackRight.push()
       this.humidityData.push(humidity || null);
 
       if (this.timeData.length > this.maxLen) {
         this.timeData.shift();
-        this.temperatureData.shift();
-        this.humidityData.shift();
+        //this.temperatureData.shift();
+        //this.humidityData.shift();
+        this.temperatureEngineData.shift();
+        this.temperatureTyreFrontLeft.shift();
+        this.temperatureTyreFrontRigh.shift();
+        this.temperatureTyreBackLeft .shift();
+        this.temperatureTyreBackRight .shift();
       }
     }
   }
